@@ -1,7 +1,5 @@
 ﻿# gcode-lathe
 
- [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/GrayCoHub/binder_lathe/main)
-
 .. image:: https://mybinder.org/badge_logo.svg
  :target: https://mybinder.org/v2/gh/GrayCoHub/binder_lathe/main
  
@@ -39,4 +37,6 @@ User: .95
 
 The gcode for these inputs is included along with the notebook template.  Named: turn_down.ngc
 
+
+ [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/GrayCoHub/binder_lathe/main)
 
