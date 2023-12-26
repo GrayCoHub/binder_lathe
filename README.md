@@ -1,5 +1,11 @@
 ﻿# gcode-lathe
 
+ [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/GrayCoHub/binder_lathe/main)
+
+.. image:: https://mybinder.org/badge_logo.svg
+ :target: https://mybinder.org/v2/gh/GrayCoHub/binder_lathe/main
+ 
+ 
  A Jupyter Lab notebook template (using the R kernel) creates the gcode for turning down the diameter of any size stock using a CNC lathe.  
  The gcode created for the turn-down operation includes the gcode for both the rough turn down and the finish turn down operations.
  
