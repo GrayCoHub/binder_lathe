@@ -1,0 +1,11 @@
+{
+  "name": "Python Project",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "runArgs": [ "-u", "root" ],
+  "settings": { 
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "extensions": ["ms-python.python"]
+}
