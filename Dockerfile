@@ -5,6 +5,10 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install -r requirements.txt
 
+# Install Jupyter Notebook in the Python image
+RUN pip install jupyter
+
+
 # Second stage: Use an R image and copy artifacts from the first stage
 FROM r-base:latest
 
