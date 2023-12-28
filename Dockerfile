@@ -1,11 +1,22 @@
-# Use an official R runtime as a parent image
+# First stage: Use Python 3.8 image to install Python dependencies
+FROM python:3.8-slim AS builder
+
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install -r requirements.txt
+
+# Second stage: Use R image and copy artifacts from the first stage
 FROM r-base:latest
 
-# Copy the current directory contents into the container at /app
-COPY . /app
+# Copy Python dependencies from the builder stage into the current stage
+COPY --from=builder /app /app
 
-# Install any needed packages specified in requirements.txt
+# Install R packages (IRkernel and IRdisplay)
 RUN R -e "install.packages(c('IRkernel', 'IRdisplay'))"
+
+# Set working directory and copy notebook files
+WORKDIR /app
+COPY . .
 
 # Make port 8888 available to the world outside this container
 EXPOSE 8888
